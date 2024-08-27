@@ -1,17 +1,17 @@
-function AddTodo() {
+function TodoItem(props) {
   return (
     <div className="container">
       <div className="row kg-row">
         <div className="col-5">
-          <input type="text" placeholder="Enter todo Here!" />
+          <h2>{props.todoName}</h2>
         </div>
 
         <div className="col-4">
-          <input type="date" />
+          <h2>{props.todoDate}</h2>
         </div>
         <div className="col-3">
-          <button type="button" className="btn btn-success kg-button">
-            Add
+          <button type="button" className="btn btn-danger Product-Button">
+            Delete
           </button>
         </div>
       </div>
@@ -19,4 +19,4 @@ function AddTodo() {
   );
 }
 
-export default AddTodo;
+export default TodoItem;

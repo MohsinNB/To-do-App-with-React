@@ -11,9 +11,20 @@ input{
 .Item-container{
     text-align: left;
 }
+/* .container button{
+    position: relative;
+    right: 10px;
+} */
+
 
 .kg-button{
+    min-width:75px;
+    
+}
+.Product-Button{
     min-width: 75px;
+    position: relative;
+    right: -94px;
 }
 
 .kg-row{

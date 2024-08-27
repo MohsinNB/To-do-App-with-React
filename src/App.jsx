@@ -1,19 +1,30 @@
 import AddTodo from "./Components/AddTodo";
 import AppName from "./Components/AppName";
-import TodoItem1 from "./Components/TodoItem1";
-import TodoItem2 from "./Components/TodoItem2";
 import "./App.css";
+import TodoItem from "./Components/TodoItem";
+import TodoItems from "./Components/TodoItems";
 function App() {
+  const todoItems = [
+    {
+      name: "Buy milk",
+      dueDate: "4/07/24",
+    },
+    {
+      name: "Goto College",
+      dueDate: "4/07/24",
+    },
+    {
+      name: "Complete This video course",
+      dueDate: "Any HOw",
+    },
+  ];
+  // console.log(typeof todoItems);
   return (
     <center className="todo-container">
       {/* <AppName /> it's called self closing. */}
       <AppName />
-
-      <div className="Item-container">
-        <AddTodo></AddTodo>
-        <TodoItem1></TodoItem1>
-        <TodoItem2></TodoItem2>
-      </div>
+      <AddTodo></AddTodo>
+      <TodoItems todoItems={todoItems}></TodoItems>
     </center>
   );
 }
