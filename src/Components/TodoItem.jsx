@@ -1,3 +1,4 @@
+import styles from "./TodoItem.module.css";
 function TodoItem(props) {
   return (
     <div className="container">
@@ -10,7 +11,10 @@ function TodoItem(props) {
           <h2>{props.todoDate}</h2>
         </div>
         <div className="col-3">
-          <button type="button" className="btn btn-danger Product-Button">
+          <button
+            type="button"
+            className={`${styles["ProductButton"]} btn btn-danger`}
+          >
             Delete
           </button>
         </div>

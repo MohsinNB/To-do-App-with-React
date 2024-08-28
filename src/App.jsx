@@ -17,6 +17,10 @@ function App() {
       name: "Complete This video course",
       dueDate: "Any HOw",
     },
+    {
+      name: "I will be a web Developer",
+      dueDate: "within 1 year Insha Allah",
+    },
   ];
   // console.log(typeof todoItems);
   return (
