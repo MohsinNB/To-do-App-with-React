@@ -1,19 +1,22 @@
 import styles from "./TodoItem.module.css";
-function TodoItem(props) {
+function TodoItem({ todoName, todoDate, OnDeleteClick }) {
   return (
     <div className="container">
       <div className="row kg-row">
         <div className="col-5">
-          <h2>{props.todoName}</h2>
+          <h2>{todoName}</h2>
         </div>
 
         <div className="col-4">
-          <h2>{props.todoDate}</h2>
+          <h2>{todoDate}</h2>
         </div>
         <div className="col-3">
           <button
             type="button"
             className={`${styles["ProductButton"]} btn btn-danger`}
+            onClick={() => {
+              OnDeleteClick(todoName);
+            }}
           >
             Delete
           </button>
